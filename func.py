@@ -171,7 +171,7 @@ async def main():
     else:
         video_url = opt.video_path
     sys.argv = [sys.argv[0]]
-    task = await se.TransDhTask()
+    task = se.TransDhTask()
     print(dir(se))
     print(dir(task))
     time.sleep(10) # somehow, this works...

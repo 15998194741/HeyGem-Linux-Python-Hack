@@ -1,5 +1,3 @@
-import argparse
-import gc
 import json
 import os
 import subprocess
@@ -13,26 +11,6 @@ from y_utils.config import GlobalConfig
 from y_utils.logger import logger
 import asyncio
 
-
-def get_args():
-    parser = argparse.ArgumentParser(
-        formatter_class=(argparse.ArgumentDefaultsHelpFormatter)
-    )
-
-    parser.add_argument(
-        "--audio_path",
-        type=str,
-        default="example/audio.wav",
-        help="path to local audio file",
-    )
-    parser.add_argument(
-        "--video_path",
-        type=str,
-        default="example/video.mp4",
-        help="path to local video file",
-    )
-    opt = parser.parse_args()
-    return opt
 
 
 def write_video(
@@ -159,21 +137,11 @@ se.write_video = write_video
 
 
 async def main():
-    opt = get_args()
     # 获取音频输入位置
-    if not os.path.exists(opt.audio_path):
-        audio_url = "example/audio.wav"
-    else:
-        audio_url = opt.audio_path
-
-    if not os.path.exists(opt.video_path):
-        video_url = "example/video.mp4"
-    else:
-        video_url = opt.video_path
-    sys.argv = [sys.argv[0]]
+    audio_url = "example/audio.wav"
+    video_url = "example/video.mp4"
+    # sys.argv = [sys.argv[0]]
     task = se.TransDhTask()
-    print(dir(se))
-    print(dir(task))
     time.sleep(10) # somehow, this works...
 
     code = "1004" # 任务ID这个是

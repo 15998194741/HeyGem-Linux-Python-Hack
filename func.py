@@ -140,7 +140,7 @@ async def main():
     audio_url = "example/audio.wav"
     # 视频输入地址
     video_url = "example/video.mp4"
-    sys.argv = [sys.argv[0]]
+    # sys.argv = [sys.argv[0]]
     print(sys.argv)
     task = se.TransDhTask()
     time.sleep(10) # somehow, this works...

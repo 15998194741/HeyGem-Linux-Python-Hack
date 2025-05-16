@@ -113,6 +113,7 @@ def write_video(
         subprocess.call(command, shell=True)
         print("###### Custom Video Writer write over")
         print(f"###### Video result saved in {os.path.realpath(result_path)}")
+        print(f"任务结束可以把所有参数都去除掉的其实 水印 数字人标识 我们都不需要的")
         exit(0)
         result_queue.put([True, result_path])
     except Exception as e:
@@ -137,19 +138,13 @@ se.write_video = write_video
 
 async def main():
     # 获取音频输入位置
-    audio_url = "example/audio.wav"
+    audio_url = "example/output_vi.wav"
     # 视频输入地址
     video_url = "example/video.mp4"
     # sys.argv = [sys.argv[0]]
-    print(sys.argv)
     task = se.TransDhTask()
     time.sleep(10) # somehow, this works...
-
-    # 音频地址 视频地址 任务ID 水印 数字人 抖音 抖音号
-    task.work(audio_url, video_url, "1001", 1, 0, 0, 0)
-    task.work(audio_url, video_url, "1002", 0, 1, 0, 0)
-    task.work(audio_url, video_url, "1003", 0, 0, 1, 0)
-    task.work(audio_url, video_url, "1004", 0, 0, 0, 1)
+    # 音频地址 视频地址 任务ID 水印 数字人
     task.work(audio_url, video_url, "1005", 0, 0, 0, 0)
     print("这里结束不知道是不是这个任务的结束，清空资源")
 

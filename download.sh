@@ -1,9 +1,9 @@
 set -e
 set -u
-if [ -z "$github_proxy" ]; then
-    export github_proxy="https://gh.llkk.cc" # 默认代理地址
-fi
-
+#if [ -z "$github_proxy" ]; then
+#    export github_proxy="https://gh.llkk.cc" # 默认代理地址
+#fi
+github_proxy="https://gh.llkk.cc"
 # face attr
 mkdir -p face_attr_detect
 wget "$github_proxy/https://github.com/Holasyb918/HeyGem-Linux-Python-Hack/releases/download/ckpts_and_onnx/face_attr_epoch_12_220318.onnx" -O face_attr_detect/face_attr_epoch_12_220318.onnx
@@ -12,7 +12,7 @@ wget "$github_proxy/https://github.com/Holasyb918/HeyGem-Linux-Python-Hack/relea
 mkdir -p face_detect_utils/resources
 wget "$github_proxy/https://github.com/Holasyb918/HeyGem-Linux-Python-Hack/releases/download/ckpts_and_onnx/pfpld_robust_sim_bs1_8003.onnx" -O face_detect_utils/resources/pfpld_robust_sim_bs1_8003.onnx
 wget "$github_proxy/https://github.com/Holasyb918/HeyGem-Linux-Python-Hack/releases/download/ckpts_and_onnx/scrfd_500m_bnkps_shape640x640.onnx" -O face_detect_utils/resources/scrfd_500m_bnkps_shape640x640.onnx
-wget "$github_proxy/https://github.com/Holasyb918/HeyGem-Linux-Python-Hack/releases/download/ckpts_and_onnx/model_float32.onnx -O face_detect_utils/resources/model_float32.onnx"
+wget "$github_proxy/https://github.com/Holasyb918/HeyGem-Linux-Python-Hack/releases/download/ckpts_and_onnx/model_float32.onnx" -O face_detect_utils/resources/model_float32.onnx
 
 # dh model
 mkdir -p landmark2face_wy/checkpoints/anylang

@@ -3,7 +3,7 @@ name = "heygem-linux-python-hack"
 version = "0.1.0"
 description = "A docker free offline version for HeyGem; Python and Linux is all you need!"
 readme = "README.md"
-requires-python = ">=3.8"
+requires-python = "==3.8"
 dependencies = [
     "appdirs==1.4.4",
     "apstone==0.0.8",

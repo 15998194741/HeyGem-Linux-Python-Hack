@@ -1,9 +1,6 @@
 set -e
 set -u
-#if [ -z "$github_proxy" ]; then
-#    export github_proxy="https://gh.llkk.cc" # 默认代理地址
-#fi
-github_proxy="https://gh.llkk.cc"
+github_proxy="https://gh.llkk.cc" # 替换为你的 GitHub 代理地址
 
 if [ -z "$1" ]; then
   github_proxy=$1

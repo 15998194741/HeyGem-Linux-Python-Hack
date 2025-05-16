@@ -172,6 +172,8 @@ async def main():
         video_url = opt.video_path
     sys.argv = [sys.argv[0]]
     task = await se.TransDhTask()
+    print(dir(se))
+    print(dir(task))
     time.sleep(10) # somehow, this works...
 
     code = "1004" # 任务ID这个是

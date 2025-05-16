@@ -144,13 +144,13 @@ async def main():
     print(sys.argv)
     task = se.TransDhTask()
     time.sleep(10) # somehow, this works...
-    # 任务ID
-    code = "1004" # 任务ID这个是
-    task.work(audio_url, video_url, code, 0, 0, 0, 0)
-    task.work(audio_url, video_url, code, 0, 0, 0, 0)
-    task.work(audio_url, video_url, code, 0, 0, 0, 0)
-    task.work(audio_url, video_url, code, 0, 0, 0, 0)
-    task.work(audio_url, video_url, code, 0, 0, 0, 0)
+
+    # 音频地址 视频地址 任务ID 水印 数字人 抖音 抖音号
+    task.work(audio_url, video_url, "1001", 1, 0, 0, 0)
+    task.work(audio_url, video_url, "1002", 0, 1, 0, 0)
+    task.work(audio_url, video_url, "1003", 0, 0, 1, 0)
+    task.work(audio_url, video_url, "1004", 0, 0, 0, 1)
+    task.work(audio_url, video_url, "1005", 0, 0, 0, 0)
     print("这里结束不知道是不是这个任务的结束，清空资源")
 
 if __name__ == "__main__":

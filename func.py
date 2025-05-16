@@ -139,14 +139,16 @@ se.write_video = write_video
 async def main():
     # 获取音频输入位置
     audio_url = "example/audio.wav"
+    # 视频输入地址
     video_url = "example/video.mp4"
-    # sys.argv = [sys.argv[0]]
+    sys.argv = [sys.argv[0]]
+    print(sys.argv)
     task = se.TransDhTask()
     time.sleep(10) # somehow, this works...
-
+    # 任务ID
     code = "1004" # 任务ID这个是
     task.work(audio_url, video_url, code, 0, 0, 0, 0)
-
+    print("这里结束不知道是不是这个任务的结束，清空资源")
 
 if __name__ == "__main__":
     asyncio.run(main())

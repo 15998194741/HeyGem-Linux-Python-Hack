@@ -138,7 +138,7 @@ se.write_video = write_video
 
 async def main():
     # 获取音频输入位置
-    audio_url = "example/output_vi.wav"
+    audio_url = "example/vi.mp3"
     # 视频输入地址
     video_url = "example/video.mp4"
     # sys.argv = [sys.argv[0]]

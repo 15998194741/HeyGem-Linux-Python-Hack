@@ -1,8 +1,7 @@
 set -e
 set -u
-github_proxy=$1 # 可以为空 第一个参数为代理地址
 if [ -z "$github_proxy" ]; then
-    github_proxy="https://gh.llkk.cc" # 默认代理地址
+    export github_proxy="https://gh.llkk.cc" # 默认代理地址
 fi
 
 # face attr

@@ -140,7 +140,7 @@ async def main():
     # 获取音频输入位置
     audio_url = "example/vi.mp3"
     # 视频输入地址
-    video_url = "example/video.mp4"
+    video_url = "example/noaudio.mp4"
     # sys.argv = [sys.argv[0]]
     task = se.TransDhTask()
     time.sleep(10) # somehow, this works...

@@ -12,7 +12,6 @@ from y_utils.logger import logger
 import asyncio
 
 
-
 def write_video(
     output_imgs_queue,
     temp_dir,
@@ -147,6 +146,10 @@ async def main():
     time.sleep(10) # somehow, this works...
     # 任务ID
     code = "1004" # 任务ID这个是
+    task.work(audio_url, video_url, code, 0, 0, 0, 0)
+    task.work(audio_url, video_url, code, 0, 0, 0, 0)
+    task.work(audio_url, video_url, code, 0, 0, 0, 0)
+    task.work(audio_url, video_url, code, 0, 0, 0, 0)
     task.work(audio_url, video_url, code, 0, 0, 0, 0)
     print("这里结束不知道是不是这个任务的结束，清空资源")
 

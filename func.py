@@ -9,8 +9,6 @@ import service.trans_dh_service as se
 from h_utils.custom import CustomError
 from y_utils.config import GlobalConfig
 from y_utils.logger import logger
-import asyncio
-
 
 def write_video(
     output_imgs_queue,
@@ -115,8 +113,8 @@ def write_video(
         print("###### Custom Video Writer write over")
         print(f"###### Video result saved in {os.path.realpath(result_path)}")
         print(f"任务结束可以把所有参数都去除掉的其实 水印 数字人标识 我们都不需要的")
-        exit(0)
         result_queue.put([True, result_path])
+        exit(0)
     except Exception as e:
         logger.error(
             "Custom VideoWriter [{}]视频帧队列处理异常结束，异常原因:[{}]".format(
@@ -137,7 +135,7 @@ def write_video(
 se.write_video = write_video
 
 
-async def main():
+def main():
     # 获取音频输入位置
     audio_url = "example/vi.mp3"
     # 视频输入地址
@@ -150,7 +148,7 @@ async def main():
     print("这里结束不知道是不是这个任务的结束，清空资源")
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    main()
 
 # python run.py
 # python run.py --audio_path example/audio.wav --video_path example/video.mp4

@@ -2,9 +2,9 @@ set -e
 set -u
 github_proxy="https://gh.llkk.cc" # 替换为你的 GitHub 代理地址
 
-if [ -z "$1" ]; then
-  github_proxy=$1
-fi
+#if [ -z "$1" ]; then
+#  github_proxy=$1
+#fi
 # face attr
 if [ ! -e "face_attr_detect/face_attr_epoch_12_220318.onnx" ]; then
     mkdir face_attr_detect

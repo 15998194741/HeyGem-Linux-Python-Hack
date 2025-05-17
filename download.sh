@@ -1,13 +1,13 @@
 set -e
 set -u
-github_proxy="https://gh.llkk.cc" # 替换为你的 GitHub 代理地址
-
+#github_proxy="https://gh.llkk.cc" # 替换为你的 GitHub 代理地址
+github_proxy="https://ghfast.top"
 #if [ -z "$1" ]; then
 #  github_proxy=$1
 #fi
 # face attr
 if [ ! -e "face_attr_detect/face_attr_epoch_12_220318.onnx" ]; then
-    mkdir face_attr_detect
+#    mkdir face_attr_detect
     wget "$github_proxy/https://github.com/Holasyb918/HeyGem-Linux-Python-Hack/releases/download/ckpts_and_onnx/face_attr_epoch_12_220318.onnx" -O face_attr_detect/face_attr_epoch_12_220318.onnx
 fi
 

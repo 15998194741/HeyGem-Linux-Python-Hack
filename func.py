@@ -110,6 +110,7 @@ def write_video(
                 audio_path, output_mp4, result_path
             )
             logger.info("Custom command:{}".format(command))
+            logger.info("其他参数都没用 也不知道留着干嘛 到时候都删他")
         subprocess.call(command, shell=True)
         print("###### Custom Video Writer write over")
         print(f"###### Video result saved in {os.path.realpath(result_path)}")

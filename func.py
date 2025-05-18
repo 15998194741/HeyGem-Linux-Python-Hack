@@ -133,22 +133,18 @@ def write_video(
 
 
 se.write_video = write_video
+task = se.TransDhTask()
 
-
-def main():
-    # 获取音频输入位置
-    audio_url = "example/vi.mp3"
-    # 视频输入地址
-    video_url = "example/noaudio.mp4"
-    # sys.argv = [sys.argv[0]]
-    task = se.TransDhTask()
+def run(audio_url, video_url):
     time.sleep(10) # somehow, this works...
     # 音频地址 视频地址 任务ID 水印 数字人
     task.work(audio_url, video_url, "1005", 0, 0, 0, 0)
     print("这里结束不知道是不是这个任务的结束，清空资源")
 
 if __name__ == "__main__":
-    main()
+    audio_url = "example/vi.mp3"
+    video_url = "example/noaudio.mp4"
+    run(audio_url, video_url)
 
 # python run.py
 # python run.py --audio_path example/audio.wav --video_path example/video.mp4
